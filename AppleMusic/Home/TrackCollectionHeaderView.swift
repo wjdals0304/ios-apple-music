@@ -35,6 +35,5 @@ class TrackCollectionHeaderView: UICollectionReusableView {
         guard let todaysItem = item else { return }
         tapHandler?(todaysItem)
         
-        
     }
 }
