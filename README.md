@@ -8,5 +8,5 @@
 
 # 사용요소 
 
-- UICollectionReusableView 
-- mvvm 패턴 (  Track - model , TrackManager - viewModel , HomeViewController - view ) 
+- UICollectionReusableView , collectionView , AVFoundation 
+- mvvm 패턴 
