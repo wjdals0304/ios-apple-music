@@ -30,6 +30,8 @@
 
  -  cell 클릭 이벤트 call back clouser 
 
+https://yagom.net/forums/topic/cell-%EC%95%88%EC%9D%98-button%EC%9D%84-%EC%B2%98%EB%A6%AC%ED%95%98%EB%8A%94-%EC%97%AC%EB%9F%AC%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95%EB%93%A4/
+
 ``` 
  class TrackCollectionHeaderView: UICollectionReusableView {
 
