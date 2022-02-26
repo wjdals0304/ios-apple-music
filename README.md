@@ -12,7 +12,55 @@
 
 # 새로 배운 내용 
 
- - 헤더 뷰 구성 UICollectionReusableView  
+ -  UICollectionReusableView  
  
+ ```
+   func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+          .... 
+          
+        default :
+           return UICollectionReusableView() 
+           
  
+ ```
  
+
+ -  cell 클릭 이벤트 call back clouser 
+
+``` 
+ class TrackCollectionHeaderView: UICollectionReusableView {
+
+    var tapHandler: ((AVPlayerItem) -> Void)?
+   @IBAction func cardTapped(_ sender: UIButton) {
+        // TODO: 탭했을때 처리
+        
+        guard let todaysItem = item else { return }
+        tapHandler?(todaysItem)
+        
+    }
+   }
+   
+   
+   ------------------------------------------------------------
+   
+ ViewController 
+   
+   
+  cell.tapHandler = { item -> Void in
+                // player 를 띄운다
+                let playerStoryboard = UIStoryboard.init(name: "Player", bundle: nil)
+                guard let playerVC = playerStoryboard.instantiateViewController(withIdentifier: "PlayerViewController") as? PlayerViewController else { return }
+                
+                playerVC.simplePlayer.replaceCurrentItem(with: item)
+                
+                self.present(playerVC, animated: true, completion: nil)
+                
+                
+                
+                print("----> item title : \(item.convertToTrack()?.title)")
+            }
+
+``` 
