@@ -7,6 +7,7 @@
 # 사용요소 
 
 - UICollectionReusableView, collectionView, AVFoundation 
+- Storyboard
 
 
 
